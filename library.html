@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff500a">
+    <meta name="description" content="Your personal collection of saved stories on Kandilunan.">
+    <title>Kandilunan | My Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="index.html">Kandilunan<span>.</span></a>
+
+            <div class="nav-links">
+                <a href="index.html">Discover</a>
+                <a href="library.html" aria-current="page">My Library</a>
+                <button class="theme-button" id="themeToggle"
+                        type="button" aria-label="Switch to dark mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <p class="eyebrow">YOUR PERSONAL COLLECTION</p>
+            <h1>My Library<span>.</span></h1>
+            <p>All the stories you've chosen to keep, in one place.</p>
+            <a href="index.html" class="text-link">← Discover more stories</a>
+        </section>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Your saved stories</h2>
+                    <p class="muted">Your favorites, ready whenever you are.</p>
+                </div>
+                <p id="resultCount" class="muted" aria-live="polite"></p>
+            </div>
+
+            <div id="storyGrid" class="story-grid"></div>
+
+            <div id="emptyMessage" class="empty-state" hidden>
+                <span class="empty-icon">♡</span>
+                <h3>Your library is waiting.</h3>
+                <p>You haven't saved any stories yet.</p>
+                <a href="index.html" class="primary-button">Discover Stories</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo" href="index.html">Kandilunan<span>.</span></a>
+        <p>Your stories, your own little corner.</p>
+        <p class="copyright">ITE 1 Project · Storybook Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

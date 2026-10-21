@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff500a">
+    <meta name="description" content="Discover stories, explore genres, and find your next favorite read on Kandilunan.">
+    <title>Kandilunan | Discover Stories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="index.html">Kandilunan<span>.</span></a>
+
+            <form class="search-form" id="searchForm" role="search">
+                <label class="sr-only" for="searchInput">Search stories</label>
+                <input id="searchInput" type="search"
+                       placeholder="Search stories or authors...">
+                <button type="submit" aria-label="Search">⌕</button>
+            </form>
+
+            <div class="nav-links">
+                <a href="index.html" aria-current="page">Discover</a>
+                <a href="library.html">My Library</a>
+                <button class="theme-button" id="themeToggle"
+                        type="button" aria-label="Switch to dark mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">A LITTLE CORNER FOR BIG IMAGINATIONS</p>
+                <h1>Every story begins<br>with <span>a page.</span></h1>
+                <p class="hero-description">
+                    Find your next favorite read. Explore romance, drama,
+                    fantasy, mystery, and stories that stay with you.
+                </p>
+                <a href="#stories" class="primary-button">Explore Stories ↓</a>
+            </div>
+
+            <div class="magic-book-scene" aria-hidden="true">
+                <div class="magic-spark spark-one">✦</div>
+                <div class="magic-spark spark-two">✧</div>
+                <div class="magic-spark spark-three">✦</div>
+                <div class="magic-spark spark-four">✧</div>
+
+                <div class="magic-glow"></div>
+
+                <div class="magic-book">
+                    <div class="book-pages"></div>
+                    <div class="book-cover">
+                        <div class="book-decoration">✦</div>
+                        <div class="book-title">Books</div>
+                        <div class="book-divider">✧</div>
+                        <div class="book-subtitle">A world of stories</div>
+                    </div>
+                </div>
+
+                <div class="magic-orbit orbit-one"></div>
+                <div class="magic-orbit orbit-two"></div>
+            </div>
+        </section>
+
+        <section class="content-section" id="stories">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR NEXT CHAPTER AWAITS</p>
+                    <h2>Discover Stories</h2>
+                    <p class="muted">Thirty stories. Different worlds. Endless possibilities.</p>
+                </div>
+                <div class="filter-control">
+                    <label for="genreFilter">Genre</label>
+                    <select id="genreFilter">
+                        <option value="all">All genres</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results-bar">
+                <p id="resultCount" aria-live="polite">Loading stories...</p>
+                <button id="clearFilters" class="text-button" type="button">
+                    Clear filters
+                </button>
+            </div>
+
+            <div id="storyGrid" class="story-grid"></div>
+
+            <div id="emptyMessage" class="empty-state" hidden>
+                <span class="empty-icon">⌕</span>
+                <h3>No stories found</h3>
+                <p>Try a different title, author, or genre.</p>
+                <button id="resetSearch" class="primary-button" type="button">
+                    Show all stories
+                </button>
+            </div>
+        </section>
+
+        <section class="library-banner">
+            <div>
+                <p class="eyebrow">KEEP YOUR FAVORITES CLOSE</p>
+                <h2>Your own little library.</h2>
+                <p>Save stories you love and find them again whenever you want.</p>
+            </div>
+            <a class="primary-button" href="library.html">Open My Library →</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo" href="index.html">Kandilunan<span>.</span></a>
+        <p>A little corner for stories and imagination.</p>
+        <p class="copyright">ITE 1 Project · Storybook Website</p>
+    </footer>
+
+    <dialog id="bookDialog" class="book-dialog">
+        <button type="button" class="dialog-close" id="closeDialog"
+                aria-label="Close book details">×</button>
+        <div id="dialogContent"></div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>

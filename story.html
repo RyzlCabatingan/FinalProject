@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff500a">
+    <meta name="description" content="Read a story on Kandilunan.">
+    <title>Kandilunan | Read Story</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="index.html">Kandilunan<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Discover</a>
+                <a href="library.html">My Library</a>
+                <button class="theme-button" id="themeToggle"
+                        type="button" aria-label="Switch to dark mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="reader-main">
+        <a href="index.html" class="text-link back-link">← Back to Discover</a>
+
+        <div id="storyDetails">
+            <p class="muted">Loading story...</p>
+        </div>
+
+        <section class="reader-panel" id="readerPanel" hidden>
+            <div class="reader-heading">
+                <div>
+                    <p class="eyebrow">YOUR READING SPACE</p>
+                    <h2>Settle in and read.</h2>
+                </div>
+                <span id="readingPercentage" class="progress-label">0% read</span>
+            </div>
+
+            <div class="progress-track" role="progressbar"
+                 aria-label="Reading progress"
+                 aria-valuemin="0" aria-valuemax="100"
+                 aria-valuenow="0" id="progressTrack">
+                <div id="readingProgress" class="progress-fill"></div>
+            </div>
+
+            <div class="chapter-toolbar">
+                <label for="chapterSelect">Chapter</label>
+                <select id="chapterSelect" aria-label="Select chapter"></select>
+                <button id="previousChapter" class="secondary-button"
+                        type="button" disabled>← Previous</button>
+                <button id="nextChapter" class="secondary-button"
+                        type="button" disabled>Next →</button>
+            </div>
+
+            <article id="chapterContent" class="chapter-content"></article>
+
+            <div class="chapter-bottom">
+                <button id="previousChapterBottom" class="secondary-button"
+                        type="button" disabled>← Previous chapter</button>
+                <button id="nextChapterBottom" class="secondary-button"
+                        type="button" disabled>Next chapter →</button>
+            </div>
+
+            <p id="readingComplete" class="reading-complete" hidden>
+                ✦ You've reached the end of this chapter. Thank you for reading!
+            </p>
+        </section>
+
+        <section class="reader-panel" id="slideshowPanel" hidden>
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">A LITTLE MORE TO IMAGINE</p>
+                    <h2>Story gallery</h2>
+                </div>
+                <span class="muted" id="slideCounter">1 / 3</span>
+            </div>
+
+            <div class="slideshow">
+                <button id="previousSlide" class="slide-arrow"
+                        type="button" aria-label="Previous image">‹</button>
+                <figure>
+                    <img id="slideImage" src="" alt="Story illustration">
+                    <figcaption id="slideCaption"></figcaption>
+                </figure>
+                <button id="nextSlide" class="slide-arrow"
+                        type="button" aria-label="Next image">›</button>
+            </div>
+            <div class="slide-dots" id="slideDots"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo" href="index.html">Kandilunan<span>.</span></a>
+        <p>Keep turning the pages.</p>
+        <p class="copyright">ITE 1 Project · Storybook Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
